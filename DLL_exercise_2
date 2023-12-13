@@ -1,0 +1,36 @@
+mysql> CREATE TABLE Books(book_id INT, title VARCHAR(100) NOT NULL, author VARCHAR(50), genre VARCHAR(50), publishing_date DATE NOT NULL);
+Query OK, 0 rows affected (0,03 sec)
+
+mysql> ALTER TABLE Books MODIFY author VARCHAR(50) NOT NULL;
+Query OK, 0 rows affected (0,03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> Describe Books;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| book_id         | int          | YES  |     | NULL    |       |
+| title           | varchar(100) | NO   |     | NULL    |       |
+| author          | varchar(50)  | NO   |     | NULL    |       |
+| genre           | varchar(50)  | YES  |     | NULL    |       |
+| publishing_date | date         | NO   |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+5 rows in set (0,00 sec)
+
+mysql> CREATE TABLE Employees(employee_id INT, employee_name VARCHAR(50) NOT NULL, department VARCHAR(50), salary DECIMAL);
+Query OK, 0 rows affected (0,02 sec)
+
+mysql> DROP TABLE Employees;
+Query OK, 0 rows affected (0,01 sec)
+
+mysql> SHOW TABLES;
++----------------+
+| Tables_in_mydb |
++----------------+
+| Books          |
+| DiningSpots    |
+| Events         |
+| Movies         |
++----------------+
+4 rows in set (0,00 sec)
+
